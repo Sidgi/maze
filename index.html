@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        #ball{
+          height:25px;
+          width:25px;
+          background-color:black;
+          border-radius:100%;
+          position:absolute;
+          left:67px;
+        }
+    </style>
+  </head>
+  <body>
+
+<div class ="maze">
+
+ <div id="ball"></div>
+    <iframe src="https://drive.google.com/file/d/1KJd3unxu3Ex1M7TfLIjkRPSd0VojCezd/preview" width="720" height="480" z-index: -1000>
+  </iframe>
+
+  <button onclick="play()">START</button>
+ </div>
+ <script type="text/javascript">
+
+   function  play() {
+   var ball = document.getElementById('ball');
+   var down = 0;
+   var down1 = 250;
+   var down2 = 300;
+   var left = 0;
+   var left1 = 130;
+   var left2 = 67;
+   var right3 = 260;
+   var down3 = 350;
+   var top  = 300;
+   var top1 = 160;
+   var left3 = 330;
+   var left4 = 260;
+   var top2 = 100;
+   var right4 = 400;
+   var top3 = 160;
+   var right5 = 460;
+   var down4 = 100;
+   var left5 = 660;
+   var down5 = 170;
+   var left6 = 600;
+   var down6 = 300;
+   var right6 = 530;
+   var down7 = 365;
+
+  var id = setInterval(moveDown0,10);
+ function moveDown0(){
+   if(down < 250){
+     ball.style.top = down + 'px';
+     down++;
+     }
+     else{
+       moveRight();
+     }
+}
+
+  function  moveRight(){
+    if (left == 63){
+        // setInterval(moveDown1,5);
+        // clearInterval(id);
+        moveDown1();
+    }
+    else{
+      left++;
+      ball.style.left = 67 + left +'px';
+
+    }
+  }
+  function moveDown1(){
+    if (down1 == 300){
+
+      moveRight1();
+      // clearInterval(id);
+    }
+    else{
+      down1++;
+      ball.style.top = down1 + 'px';
+     ///Balls moves right first time
+    }
+  }
+  function moveRight1(){
+    if(left1 == 67){
+       // setInterval(moveDown2,5);
+       moveDown2();
+    }
+    else{
+      left1--;
+      ball.style.left = left1 + 'px'
+    }
+  }
+  function moveDown2(){
+    if(down2 == 350){
+       moveRight2();
+    }
+    else{
+    down2++;
+    ball.style.top = down2 + 'px';
+  }
+  }
+  function moveRight2(){
+    if(left2<260){
+      left2++;
+      ball.style.left = left2 +'px';
+    }
+    else{
+       moveTop();
+        }
+   function moveTop(){
+     if(down3 == 300){
+             moveRight3();
+           }
+     else{
+       down3--;
+       ball.style.top = down3 +'px';
+          }
+         }
+         function moveRight3(){
+           if(right3 <330){
+             right3++;
+             ball.style.left = right3 + 'px';
+           }else{
+             moveTop1();
+           }
+         }
+         function moveTop1(){
+           if(top == 160){
+             moveLeft1();
+           }
+           else {
+             top--;
+             ball.style.top = top + 'px';
+           }
+         }
+         function moveLeft1(){
+           if (left3 == 260) {
+              moveTop2();
+           }
+           else {
+              left3--;
+              ball.style.left = left3 + 'px';
+           }
+         }
+         function moveTop2(){
+           if (top1 == 100) {
+              moveRight4();
+           }
+           else {
+                top1--;
+                ball.style.top = top1 + 'px';
+           }
+         }
+         function moveRight4(){
+           if(left4 == 400){
+             moveDown3();
+          }else {
+           left4++;
+           ball.style.left = left4 + 'px';
+         }
+       }
+       function moveDown3(){
+         if(top2 == 160){
+            moveRight5();
+         }else {
+            top2++;
+            ball.style.top = top2+'px';
+         }
+       }
+       function moveRight5(){
+         if(right4 ==460){
+              moveTop3();
+         }else{
+            right4++;
+            ball.style.left = right4 + 'px';
+         }
+         function moveTop3(){
+           if(top3 == 100){
+              moveRight6();
+           }else{
+             top3--;
+             ball.style.top = top3 + 'px'
+           }
+         }
+         function moveRight6(){
+           if(right5 ==660){
+              moveDown4();
+           }else{
+              right5++;
+              ball.style.left = right5 +'px';
+           }
+         }
+         function moveDown4(){
+           if(down4 == 170){
+              moveLeft2();
+           }else{
+              down4++;
+              ball.style.top = down4 + 'px';
+           }
+         }
+         function moveLeft2(){
+           if(left5 ==600){
+              moveDown5();
+           }else{
+              left5--;
+              ball.style.left = left5 + 'px';
+           }
+         }
+         function moveDown5(){
+           if (down5 == 300) {
+              moveLeft3();
+           }else {
+             down5++;
+             ball.style.top = down5 + 'px';
+           }
+         }
+         function moveLeft3(){
+           if(left6 == 530){
+              moveDown6();
+           }else{
+              left6--;
+              ball.style.left = left6 +'px';
+           }
+         }
+         function moveDown6(){
+           if (down6 == 365 ) {
+              moveRight7();
+           }else {
+              down6++;
+              ball.style.top = down6+ 'px';
+           }
+         }
+         function moveRight7(){
+           if(right6 == 660) {
+              moveDown7();
+           }else{
+             right6++;
+             ball.style.left = right6 + 'px';
+           }
+         }
+         function moveDown7(){
+           if (down7 == 440) {
+              clearInterval(id);
+           }else {
+             down7++;
+             ball.style.top = down7 + 'px';
+           }
+         }
+       }
+  }
+}
+
+//
+//let leftInitial = document.getElementById('ball').style.left;
+//let  m = transformArray(leftInitial);
+//transforms array into number
+function transformArray(str){
+  var array = str.split('');
+  for (let i =0; i<array.length; i++){
+    if(array[i]==='%'){
+      array.splice(i);
+    }
+  }
+  //
+  return Number(array.join(''));
+}
+ </script>
+  </body>
+</html>
